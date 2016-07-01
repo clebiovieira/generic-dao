@@ -142,7 +142,7 @@ public class GenericDaoHibernate {
 		Criteria criteria = getSession().createCriteria(clazz);
 
 		for (String propertyOrder : propertiesOrder) {
-			if (order.isAscOrder()) {
+			if (order.isAscending()) {
 				criteria.addOrder(org.hibernate.criterion.Order.asc(propertyOrder));
 			} else {
 				criteria.addOrder(org.hibernate.criterion.Order.desc(propertyOrder));
